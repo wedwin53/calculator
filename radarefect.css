@@ -1,0 +1,152 @@
+
+.flex {
+  min-height: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex:before {
+  -webkit-transition: 0.5s all ease;
+  -moz-transition: 0.5s all ease;
+  -o-transition: 0.5s all ease;
+  -ms-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  position: absolute;
+  content: '';
+  background-color: #efefef;
+}
+
+    .flex:focus {
+        outline: none;
+    }
+
+.flex.hover:before{
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -webkit-animation: radar 2s ease;
+  -moz-animation: radar 2s ease;
+  -o-animation: radar 2s ease;
+  -ms-animation: radar 2s ease;
+  animation: radar 2s ease;
+}
+
+.flex:hover:before{
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -webkit-animation: radar 2s ease;
+  -moz-animation: radar 2s ease;
+  -o-animation: radar 2s ease;
+  -ms-animation: radar 2s ease;
+  animation: radar 2s ease;
+}
+
+
+@keyframes radar{
+  0%{
+      width:25px;
+      height:25px;
+      border:40px 
+      solid #fe0030;
+      opacity:0;
+  }50%{
+      opacity:.3;
+  }
+  90%{
+      width:100px;
+      height:100px;
+  }
+  90%,100%{
+      border:2px
+      solid #fe0030;
+      opacity:0;
+  }100%{
+      width:100px;
+      height:100px;
+  }
+}
+
+@-webkit-keyframes radar{
+  0%{
+      width:75px;
+      height:75px;
+      border:40px 
+      solid #7F0039;
+      opacity:0;
+  }50%{
+      opacity:.1;
+  }
+  90%{
+      width:300px;
+      height:300px;
+  }
+  90%,100%{
+      border:2px
+      solid #7F0039;
+      opacity:0;
+  }100%{
+      width:300px;
+      height:300px;
+  }
+}
+
+@-moz-keyframes radar{
+  0%{
+      width:75px;
+      height:75px;
+      border:40px 
+      solid #7F0039;
+      opacity:0;
+  }50%{
+      opacity:.1;
+  }
+  90%{
+      width:300px;
+      height:300px;
+  }
+  90%,100%{
+      border:2px
+      solid #7F0039;
+      opacity:0;
+  }100%{
+      width:300px;
+      height:300px;
+  }
+}
+
+@-o-keyframes radar{
+  0%{
+      width:75px;
+      height:75px;
+      border:40px 
+      solid #7F0039;
+      opacity:0;
+  }50%{
+      opacity:.1;
+  }
+  90%{
+      width:300px;
+      height:300px;
+  }
+  90%,100%{
+      border:2px
+      solid #7F0039;
+      opacity:0;
+  }100%{
+      width:300px;
+      height:300px;
+  }
+}
+
