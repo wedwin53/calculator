@@ -31,32 +31,32 @@
 	<div class="form-group">
 		<div class="input-group margin-bottom-sm">
 		  <span class="input-group-addon"><i class="fa fa-balance-scale fa-fw"></i></span>
-		  <input class="form-control" type="text" placeholder="Peso en Kilos" name="peso" id="peso">
+		  <input class="form-control" type="text" placeholder="Peso en Kilos" name="peso" id="peso" required>
 		</div>
 		<div class="input-group margin-bottom-sm">
 			<span class="input-group-addon"><i class="fa fa-arrows-v fa-fw"></i></span>
-			<input class="form-control" type="text" placeholder="Alto" name="alto" id="alto">
+			<input class="form-control" type="text" placeholder="Alto" name="alto" id="alto" required>
 		</div>
 		<div class="input-group margin-bottom-sm">
 			<span class="input-group-addon"><i class="fa fa-arrows-h fa-fw"></i></span>
-			<input class="form-control" type="text" placeholder="Ancho" name="ancho" id="ancho">
+			<input class="form-control" type="text" placeholder="Ancho" name="ancho" id="ancho" required>
 		</div>
 		<div class="input-group margin-bottom-sm">
 			<span class="input-group-addon"><i class="fa fa-arrows-alt fa-fw"></i></span>
-			<input class="form-control" type="text" placeholder="largo" name="largo" id="largo">
+			<input class="form-control" type="text" placeholder="largo" name="largo" id="largo" required>
 		</div>
 		<div class="input-group margin-bottom-sm">
 			<span class="input-group-addon"><i class="fa fa-bars fa-fw"></i></span>
-			<select class="form-control" id="arancel" name="arancel">
+			<select class="form-control" id="arancel" name="arancel" required>
 				<option selected>Seleccione...</option>
 				<option value="0.25">Ropa 25% </option>
 			</select>
 		</div>
 		<hr/>
 		<div class="input-group margin-bottom">
-			<input class="btn btn-success" type="button" id="enviar" value="Calcular" />
+			<input class="btn btn-success" type="submit" id="enviar" value="Calcular" />
 		</div>
-		<h1></h1>
+		<h1 class="display-4"></h1>
 
 	</div>
 </fieldset>
@@ -78,7 +78,7 @@ $(function() {
 			$("h1").append(parseInt(resultado_final));
 		}
 			resultado_final = parseInt(pes.value * costo_libra);
-			$("h1").append("Estimado a Pagar es: " + parseInt(resultado_final) + "$");
+			$("h1").append("Estimado a Pagar es: <strong>" + parseInt(resultado_final) + "$</strong>");
 
 		//alert(resultado);
 	});
