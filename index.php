@@ -67,15 +67,20 @@
 	var alt = document.getElementById("alto");
 	var anch = document.getElementById("ancho");
 	var larg = document.getElementById("largo");
-
+	var aran = document.getElementById("arancel");
+	var costo_libra = 7;
 $(function() {
 	var resultado;
 	$("#enviar").click(function(){
 		resultado = (parseInt(alt.value) * parseInt(anch.value) * parseInt(larg.value)) / 166;
-		$("h1").append(parseInt(resultado));
+		if (resultado > pes.value) {
+			resultado_final = resultado * costo_libra;
+			$("h1").append(parseInt(resultado_final));
+		}
+			resultado_final = parseInt(pes.value * costo_libra);
+			$("h1").append("Estimado a Pagar es: " + parseInt(resultado_final) + "$");
+
 		//alert(resultado);
-
-
 	});
 
 });
