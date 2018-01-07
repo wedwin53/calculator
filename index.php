@@ -53,8 +53,9 @@
 			</select>
 		</div>
 		<hr/>
-		<div class="input-group margin-bottom">
+		<div class="btn-group margin-bottom">
 			<input class="btn btn-success" type="button" id="enviar" value="Calcular" />
+			<input class="btn btn-info" type="reset" value="Limpiar" />
 		</div>
 		<h1></h1>
 
@@ -76,11 +77,11 @@ $(function() {
 		if (resultado > parseInt(pes.value)) {
 			//resultado_final = resultado.value * costo_libra;
 			resultado2 = resultado * costo_libra;
-			$("h1").html("Estimado a Pagar es: <strong>" + parseInt(resultado2) + "$</strong>");
+			$("h1").html("Estimado a Pagar es: <strong>" + parseInt(resultado2) + "$ USD</strong> (Peso Volumen)");
 
 		} else {
 			resultado_final = parseInt(pes.value) * costo_libra;
-			$("h1").html("Estimado a Pagar es: <strong>" + parseInt(resultado_final) + "$</strong>");
+			$("h1").html("Estimado a Pagar es: <strong>" + parseInt(resultado_final) + "$ USD</strong> (Peso Fisico)");
 
 		}
 
