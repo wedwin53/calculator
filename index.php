@@ -29,6 +29,10 @@
 	<fieldset>
 		<legend>Calculadora</legend>
 	<div class="form-group">
+		<div class="form-group">
+			<label class="radio-inline"><input type="radio" name="optradio">Miami - CR</label>
+			<label class="radio-inline"><input type="radio" name="optradio">CR - VZLA</label>
+		</div>
 		<div class="input-group margin-bottom-sm">
 		  <span class="input-group-addon"><i class="fa fa-balance-scale fa-fw"></i></span>
 		  <input class="form-control" type="text" placeholder="Peso en Kilos" name="peso" id="peso" required>
