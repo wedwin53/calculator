@@ -61,7 +61,7 @@
 			<input class="btn btn-success" type="button" id="enviar" value="Calcular" />
 			<input class="btn btn-info" type="reset" value="Limpiar" />
 		</div>
-		<h1></h1>
+		<h2></h2>
 
 	</div>
 </fieldset>
@@ -74,18 +74,19 @@
 	var larg = document.getElementById("largo");
 	var aran = document.getElementById("arancel");
 	var costo_libra = 7;
+	var libra_adicional = 5;
 $(function() {
 	var resultado;
 	$("#enviar").click(function(){
-		resultado = (parseInt(alt.value) * parseInt(anch.value) * parseInt(larg.value)) / 166;
-		if (resultado > parseInt(pes.value)) {
+		resultado = (parseFloat(alt.value).toFixed(2) * parseFloat(anch.value).toFixed(2) * parseFloat(larg.value).toFixed(2)) / 166;
+		if (resultado > parseFloat(pes.value).toFixed(2)) {
 			//resultado_final = resultado.value * costo_libra;
-			resultado2 = resultado * costo_libra;
-			$("h1").html("Estimado a Pagar es: <strong>" + parseInt(resultado2) + "$ USD</strong> (Peso Volumen)");
+			resultado2 = ((resultado - 1) * libra_adicional ) + costo_libra;
+			$("h2").html("Estimado a Pagar es: <strong>" + parseFloat(resultado2).toFixed(2) + "$ USD</strong> (Peso Volumen)");
 
 		} else {
-			resultado_final = parseInt(pes.value) * costo_libra;
-			$("h1").html("Estimado a Pagar es: <strong>" + parseInt(resultado_final) + "$ USD</strong> (Peso Fisico)");
+			resultado_final = parseFloat(pes.value).toFixed(2) * costo_libra;
+			$("h2").html("Estimado a Pagar es: <strong>" + parseFloat(resultado_final).toFixed(2) + "$ USD</strong> (Peso Fisico)");
 
 		}
 
