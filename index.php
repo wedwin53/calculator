@@ -85,7 +85,7 @@ $(function() {
 			$("h2").html("Estimado a Pagar es: <strong>" + parseFloat(resultado2).toFixed(2) + "$ USD</strong> (Peso Volumen)");
 
 		} else {
-			resultado_final = parseFloat(pes.value).toFixed(2) * costo_libra;
+			resultado_final = ((parseFloat(pes.value).toFixed(2) - 1) * libra_adicional) + costo_libra;
 			$("h2").html("Estimado a Pagar es: <strong>" + parseFloat(resultado_final).toFixed(2) + "$ USD</strong> (Peso Fisico)");
 
 		}
